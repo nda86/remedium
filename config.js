@@ -1,9 +1,9 @@
 var config;
 config = {
-	timer: 1000,
-	source_dir: "d:\\set\\Remedium\\remedium\\source\\",
-	success_dir: "d:\\set\\Remedium\\remedium\\success\\",
-	tmp_dir: "d:\\set\\Remedium\\remedium\\tmp\\"
+	timer: 5000,
+	source_dir: __dirname + "\\work\\source\\",
+	success_dir: __dirname + "\\work\\success\\",
+	tmp_dir: __dirname + "\\work\\tmp\\"
 };
 
 module.exports = config;
