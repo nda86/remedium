@@ -20,54 +20,52 @@ var timer = config.timer;
 // console.log(tmp_dir);
 // console.log(timer);
 
-function Code(){};
+function Code(){}
 
 var arrCode = [];
 
+
+function spliting (fileName) {
+	fs.renameSync(source_dir + fileName, tmp_dir + fileName);
+}
+
+
 function do_export_pdf (fileName) {
 	// пермещаем pdf в tmp папку для обработки
-	fs.renameSync(source_dir + fileName, tmp_dir + fileName);
-	//переводим pdf в txt
+	// переводим pdf в txt
 	extract(tmp_dir + fileName, function(err, pages){
 		if (err) {
 			return console.log(err);
 		}
 		// переводим объект с текстом в простой string
 		pages = pages.toString();
-		// инит счётчика страниц
-		var count = 0;
+
 		// регулярка для поиска номера анализа, используеся для имени файла
 		var re = /Заявка: (БрРМ\/.*\/\d*)/ig;
 
 		// регулярка для поиска имени
 		var re_name = /Пациент:\s*(.*)/i;
 
-
-		while ((result = re.exec(pages)) !== null){
-			count++;
-
 			var name = '';
 		// содаём имя для pdf
 			// код(номер) анализа
-			var code = result[1].replace(/\//g,"_");
-			//  количественный номер анализа
-			var cnt = 1;
+			var number = result[1].replace(/\//g,"_");
 
 			// флаг повторного кода
 			var flagCodeRepeat = false;
 			for (var i=0; i<arrCode.length; i++){
 				var obj = arrCode[i];
-				if (obj[code] == null){
+				if (obj[number] == null){
 					continue;
 				}else{
-					obj[code]++;
-					cnt = obj[code];
+					obj[number]++;
+					number = number + "_" + obj[number];
 					flagCodeRepeat = true;
 				}
 			}
 			if (!flagCodeRepeat){
 				var newCode = new Code;
-				newCode[code] = 1;
+				newCode[number] = 1;
 				arrCode.push(newCode);
 			}
 
@@ -75,27 +73,18 @@ function do_export_pdf (fileName) {
 			// фио пациента
 			var fio = re_name.exec(pages);
 			if (fio !== null){
-				name = fio[1] + ";" + code + ";" + cnt;
+				name = number + " - " + fio[1];
 			}else{
 				name = number;
 			}
 
 			fs.copySync(tmp_dir + fileName, success_dir + name + ".pdf");
 			// вырезаем страничку с анализом
-			// var pdf = spindrift(tmp_dir + fileName).page(count);
 			// сохраняем анализ с новым именем
 			// pdf.pdfStream().pipe(fs.createWriteStream(success_dir + name + ".pdf"))
-		}
-		// console.log('nop');
-		console.log(flagCodeRepeat);
-
-		for (var i=0; i<arrCode.length; i++){
-			for (var car in arrCode[i]){
-				console.log(car + " : " + arrCode[i][car]);
-			}
-		}
 	});
 };
+
 
 
 
@@ -108,4 +97,8 @@ function parse(){
 	});
 };
 
-setInterval(parse, timer);
+// setInterval(parse, timer);
+
+var fileName = __dirname + "/test/1.js";
+var pdf = spindrift(fileName).page(1);
+console.log(pdf.toString());

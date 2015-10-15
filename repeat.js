@@ -51,23 +51,25 @@ function do_export_pdf (fileName) {
 			var name = '';
 		// содаём имя для pdf
 			// код(номер) анализа
-			var number = result[1].replace(/\//g,"_");
+			var code = result[1].replace(/\//g,"_");
+			//  количественный номер анализа
+			var cnt = 1;
 
 			// флаг повторного кода
 			var flagCodeRepeat = false;
 			for (var i=0; i<arrCode.length; i++){
 				var obj = arrCode[i];
-				if (obj[number] == null){
+				if (obj[code] == null){
 					continue;
 				}else{
-					obj[number]++;
-					number = number + "_" + obj[number];
+					obj[code]++;
+					cnt = obj[code];
 					flagCodeRepeat = true;
 				}
 			}
 			if (!flagCodeRepeat){
 				var newCode = new Code;
-				newCode[number] = 1;
+				newCode[code] = 1;
 				arrCode.push(newCode);
 			}
 
@@ -75,7 +77,7 @@ function do_export_pdf (fileName) {
 			// фио пациента
 			var fio = re_name.exec(pages);
 			if (fio !== null){
-				name = number + " - " + fio[1];
+				name = fio[1] + ";" + code + ";" + cnt;
 			}else{
 				name = number;
 			}
