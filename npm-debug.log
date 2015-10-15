@@ -1,0 +1,897 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'c:\\Program Files (x86)\\nodejs\\node.exe',
+1 verbose cli   'c:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'spindrift',
+1 verbose cli   '--save' ]
+2 info using npm@2.5.1
+3 info using node@v0.12.0
+4 warn package.json remedium@1.0.0 No description
+5 warn package.json remedium@1.0.0 No README data
+6 silly cache add args [ 'spindrift@0.0.6', null ]
+7 verbose cache add spec spindrift@0.0.6
+8 silly cache add parsed spec { raw: 'spindrift@0.0.6',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'spindrift',
+8 silly cache add   rawSpec: '0.0.6',
+8 silly cache add   spec: '0.0.6',
+8 silly cache add   type: 'version' }
+9 verbose addNamed spindrift@0.0.6
+10 silly addNamed semver.valid 0.0.6
+11 silly addNamed semver.validRange 0.0.6
+12 silly mapToRegistry name spindrift
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry uri https://registry.npmjs.org/spindrift
+16 verbose addNameVersion registry:https://registry.npmjs.org/spindrift not in flight; fetching
+17 verbose request uri https://registry.npmjs.org/spindrift
+18 verbose request no auth needed
+19 info attempt registry request try #1 at 10:42:08
+20 verbose request id 698aed1b957c4acf
+21 verbose etag "E6G8B95J7K2ADRW6WJYCK3AQN"
+22 http request GET https://registry.npmjs.org/spindrift
+23 http 304 https://registry.npmjs.org/spindrift
+24 silly get cb [ 304,
+24 silly get   { date: 'Thu, 15 Oct 2015 02:42:07 GMT',
+24 silly get     via: '1.1 varnish',
+24 silly get     'cache-control': 'max-age=60',
+24 silly get     etag: '"E6G8B95J7K2ADRW6WJYCK3AQN"',
+24 silly get     age: '0',
+24 silly get     connection: 'keep-alive',
+24 silly get     'x-served-by': 'cache-fra1222-FRA',
+24 silly get     'x-cache': 'MISS',
+24 silly get     'x-cache-hits': '0',
+24 silly get     'x-timer': 'S1444876927.784821,VS0,VE432',
+24 silly get     vary: 'Accept' } ]
+25 verbose etag https://registry.npmjs.org/spindrift from cache
+26 verbose get saving spindrift to C:\Users\NDA86\AppData\Roaming\npm-cache\registry.npmjs.org\spindrift\.cache.json
+27 silly cache afterAdd spindrift@0.0.6
+28 verbose afterAdd C:\Users\NDA86\AppData\Roaming\npm-cache\spindrift\0.0.6\package\package.json not in flight; writing
+29 verbose afterAdd C:\Users\NDA86\AppData\Roaming\npm-cache\spindrift\0.0.6\package\package.json written
+30 silly install resolved [ { name: 'spindrift',
+30 silly install resolved     version: '0.0.6',
+30 silly install resolved     description: 'PDF manipulation in Node.js! Split, join, crop, read, extract, boil, mash, stick them in a stew. ',
+30 silly install resolved     main: 'spindrift.js',
+30 silly install resolved     dependencies:
+30 silly install resolved      { temp: '~0.4.0',
+30 silly install resolved        bufferjs: '~2.0.0',
+30 silly install resolved        bufferstream: '~0.5.1',
+30 silly install resolved        async: '~0.1.22' },
+30 silly install resolved     devDependencies: {},
+30 silly install resolved     repository: { type: 'git', url: 'https://github.com/tcr/spindrift.git' },
+30 silly install resolved     author: { name: 'Tim Cameron Ryan' },
+30 silly install resolved     license: 'MIT',
+30 silly install resolved     keywords:
+30 silly install resolved      [ 'pdf',
+30 silly install resolved        'manipulation',
+30 silly install resolved        'postscript',
+30 silly install resolved        'document',
+30 silly install resolved        'split',
+30 silly install resolved        'join',
+30 silly install resolved        'crop' ],
+30 silly install resolved     _id: 'spindrift@0.0.6',
+30 silly install resolved     dist:
+30 silly install resolved      { shasum: '261f08d2ce59a6d6eb1ca1535a1ebeb2a8596290',
+30 silly install resolved        tarball: 'http://registry.npmjs.org/spindrift/-/spindrift-0.0.6.tgz' },
+30 silly install resolved     _npmVersion: '1.1.65',
+30 silly install resolved     _npmUser: { name: 'timcameronryan', email: 'id@timryan.org' },
+30 silly install resolved     maintainers: [ [Object] ],
+30 silly install resolved     directories: {},
+30 silly install resolved     _shasum: '261f08d2ce59a6d6eb1ca1535a1ebeb2a8596290',
+30 silly install resolved     _resolved: 'https://registry.npmjs.org/spindrift/-/spindrift-0.0.6.tgz',
+30 silly install resolved     _from: 'spindrift@0.0.6',
+30 silly install resolved     bugs: { url: 'https://github.com/tcr/spindrift/issues' },
+30 silly install resolved     readme: 'ERROR: No README data found!',
+30 silly install resolved     homepage: 'https://github.com/tcr/spindrift' } ]
+31 info install spindrift@0.0.6 into d:\set\Remedium\remedium
+32 info installOne spindrift@0.0.6
+33 verbose installOne of spindrift to d:\set\Remedium\remedium not in flight; installing
+34 verbose lock using C:\Users\NDA86\AppData\Roaming\npm-cache\_locks\spindrift-32fb9046b626b1cc.lock for d:\set\Remedium\remedium\node_modules\spindrift
+35 silly install write writing spindrift 0.0.6 to d:\set\Remedium\remedium\node_modules\spindrift
+36 silly cache addNamed cb spindrift@0.0.6
+37 verbose unbuild node_modules\spindrift
+38 verbose gentlyRm vacuuming d:\set\Remedium\remedium\node_modules\spindrift
+39 verbose tar unpack C:\Users\NDA86\AppData\Roaming\npm-cache\spindrift\0.0.6\package.tgz
+40 verbose tar unpacking to d:\set\Remedium\remedium\node_modules\spindrift
+41 verbose gentlyRm vacuuming d:\set\Remedium\remedium\node_modules\spindrift
+42 silly gunzTarPerm modes [ '777', '666' ]
+43 silly gunzTarPerm extractEntry package.json
+44 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+45 silly gunzTarPerm extractEntry README.md
+46 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+47 silly gunzTarPerm extractEntry spindrift.js
+48 silly gunzTarPerm modified mode [ 'spindrift.js', 420, 438 ]
+49 silly gunzTarPerm extractEntry bin/crop.js
+50 silly gunzTarPerm modified mode [ 'bin/crop.js', 493, 511 ]
+51 silly gunzTarPerm extractEntry bin/rasterize.js
+52 silly gunzTarPerm modified mode [ 'bin/rasterize.js', 493, 511 ]
+53 silly gunzTarPerm extractEntry contrib/ps2ascii.ps
+54 silly gunzTarPerm modified mode [ 'contrib/ps2ascii.ps', 420, 438 ]
+55 silly gunzTarPerm extractEntry example/test.js
+56 silly gunzTarPerm modified mode [ 'example/test.js', 420, 438 ]
+57 silly gunzTarPerm extractEntry example/test.pdf
+58 silly gunzTarPerm modified mode [ 'example/test.pdf', 420, 438 ]
+59 info preinstall spindrift@0.0.6
+60 silly prepareForInstallMany adding temp@~0.4.0 from spindrift dependencies
+61 silly prepareForInstallMany adding bufferjs@~2.0.0 from spindrift dependencies
+62 silly prepareForInstallMany adding bufferstream@~0.5.1 from spindrift dependencies
+63 silly prepareForInstallMany adding async@~0.1.22 from spindrift dependencies
+64 silly cache add args [ 'bufferjs@~2.0.0', null ]
+65 verbose cache add spec bufferjs@~2.0.0
+66 silly cache add parsed spec { raw: 'bufferjs@~2.0.0',
+66 silly cache add   scope: null,
+66 silly cache add   name: 'bufferjs',
+66 silly cache add   rawSpec: '~2.0.0',
+66 silly cache add   spec: '>=2.0.0 <2.1.0',
+66 silly cache add   type: 'range' }
+67 verbose addNamed bufferjs@>=2.0.0 <2.1.0
+68 silly addNamed semver.valid null
+69 silly addNamed semver.validRange >=2.0.0 <2.1.0
+70 silly addNameRange { name: 'bufferjs', range: '>=2.0.0 <2.1.0', hasData: false }
+71 silly mapToRegistry name bufferjs
+72 silly mapToRegistry using default registry
+73 silly mapToRegistry registry https://registry.npmjs.org/
+74 silly mapToRegistry uri https://registry.npmjs.org/bufferjs
+75 verbose addNameRange registry:https://registry.npmjs.org/bufferjs not in flight; fetching
+76 silly cache add args [ 'bufferstream@~0.5.1', null ]
+77 verbose cache add spec bufferstream@~0.5.1
+78 silly cache add parsed spec { raw: 'bufferstream@~0.5.1',
+78 silly cache add   scope: null,
+78 silly cache add   name: 'bufferstream',
+78 silly cache add   rawSpec: '~0.5.1',
+78 silly cache add   spec: '>=0.5.1 <0.6.0',
+78 silly cache add   type: 'range' }
+79 verbose addNamed bufferstream@>=0.5.1 <0.6.0
+80 silly addNamed semver.valid null
+81 silly addNamed semver.validRange >=0.5.1 <0.6.0
+82 silly addNameRange { name: 'bufferstream', range: '>=0.5.1 <0.6.0', hasData: false }
+83 silly mapToRegistry name bufferstream
+84 silly mapToRegistry using default registry
+85 silly mapToRegistry registry https://registry.npmjs.org/
+86 silly mapToRegistry uri https://registry.npmjs.org/bufferstream
+87 verbose addNameRange registry:https://registry.npmjs.org/bufferstream not in flight; fetching
+88 silly cache add args [ 'async@~0.1.22', null ]
+89 verbose cache add spec async@~0.1.22
+90 silly cache add parsed spec { raw: 'async@~0.1.22',
+90 silly cache add   scope: null,
+90 silly cache add   name: 'async',
+90 silly cache add   rawSpec: '~0.1.22',
+90 silly cache add   spec: '>=0.1.22 <0.2.0',
+90 silly cache add   type: 'range' }
+91 verbose addNamed async@>=0.1.22 <0.2.0
+92 silly addNamed semver.valid null
+93 silly addNamed semver.validRange >=0.1.22 <0.2.0
+94 silly addNameRange { name: 'async', range: '>=0.1.22 <0.2.0', hasData: false }
+95 silly mapToRegistry name async
+96 silly mapToRegistry using default registry
+97 silly mapToRegistry registry https://registry.npmjs.org/
+98 silly mapToRegistry uri https://registry.npmjs.org/async
+99 verbose addNameRange registry:https://registry.npmjs.org/async not in flight; fetching
+100 silly cache add args [ 'temp@~0.4.0', null ]
+101 verbose cache add spec temp@~0.4.0
+102 silly cache add parsed spec { raw: 'temp@~0.4.0',
+102 silly cache add   scope: null,
+102 silly cache add   name: 'temp',
+102 silly cache add   rawSpec: '~0.4.0',
+102 silly cache add   spec: '>=0.4.0 <0.5.0',
+102 silly cache add   type: 'range' }
+103 verbose addNamed temp@>=0.4.0 <0.5.0
+104 silly addNamed semver.valid null
+105 silly addNamed semver.validRange >=0.4.0 <0.5.0
+106 silly addNameRange { name: 'temp', range: '>=0.4.0 <0.5.0', hasData: false }
+107 silly mapToRegistry name temp
+108 silly mapToRegistry using default registry
+109 silly mapToRegistry registry https://registry.npmjs.org/
+110 silly mapToRegistry uri https://registry.npmjs.org/temp
+111 verbose addNameRange registry:https://registry.npmjs.org/temp not in flight; fetching
+112 verbose request uri https://registry.npmjs.org/async
+113 verbose request no auth needed
+114 info attempt registry request try #1 at 10:42:10
+115 verbose etag "411MXMU868VFVJ8Z6TJT8AB7X"
+116 http request GET https://registry.npmjs.org/async
+117 verbose request uri https://registry.npmjs.org/temp
+118 verbose request no auth needed
+119 info attempt registry request try #1 at 10:42:10
+120 verbose etag "AUUVTI4BQSDTE95UEITUHGNHC"
+121 http request GET https://registry.npmjs.org/temp
+122 verbose request uri https://registry.npmjs.org/bufferjs
+123 verbose request no auth needed
+124 info attempt registry request try #1 at 10:42:10
+125 verbose etag "2W3GJSAN9S8MSVSA6OZLFQLV5"
+126 http request GET https://registry.npmjs.org/bufferjs
+127 verbose request uri https://registry.npmjs.org/bufferstream
+128 verbose request no auth needed
+129 info attempt registry request try #1 at 10:42:10
+130 verbose etag "EF39L4RVY281I2DYGLB0UIOO1"
+131 http request GET https://registry.npmjs.org/bufferstream
+132 http 304 https://registry.npmjs.org/async
+133 silly get cb [ 304,
+133 silly get   { date: 'Thu, 15 Oct 2015 02:42:09 GMT',
+133 silly get     via: '1.1 varnish',
+133 silly get     'cache-control': 'max-age=60',
+133 silly get     etag: '"411MXMU868VFVJ8Z6TJT8AB7X"',
+133 silly get     age: '0',
+133 silly get     connection: 'keep-alive',
+133 silly get     'x-served-by': 'cache-fra1220-FRA',
+133 silly get     'x-cache': 'HIT',
+133 silly get     'x-cache-hits': '1',
+133 silly get     'x-timer': 'S1444876929.209957,VS0,VE424',
+133 silly get     vary: 'Accept' } ]
+134 verbose etag https://registry.npmjs.org/async from cache
+135 verbose get saving async to C:\Users\NDA86\AppData\Roaming\npm-cache\registry.npmjs.org\async\.cache.json
+136 silly addNameRange number 2 { name: 'async', range: '>=0.1.22 <0.2.0', hasData: true }
+137 silly addNameRange versions [ 'async',
+137 silly addNameRange   [ '0.1.0',
+137 silly addNameRange     '0.1.1',
+137 silly addNameRange     '0.1.2',
+137 silly addNameRange     '0.1.3',
+137 silly addNameRange     '0.1.4',
+137 silly addNameRange     '0.1.5',
+137 silly addNameRange     '0.1.6',
+137 silly addNameRange     '0.1.7',
+137 silly addNameRange     '0.1.8',
+137 silly addNameRange     '0.1.9',
+137 silly addNameRange     '0.1.10',
+137 silly addNameRange     '0.1.11',
+137 silly addNameRange     '0.1.12',
+137 silly addNameRange     '0.1.13',
+137 silly addNameRange     '0.1.14',
+137 silly addNameRange     '0.1.15',
+137 silly addNameRange     '0.1.16',
+137 silly addNameRange     '0.1.17',
+137 silly addNameRange     '0.1.18',
+137 silly addNameRange     '0.1.19',
+137 silly addNameRange     '0.1.20',
+137 silly addNameRange     '0.1.21',
+137 silly addNameRange     '0.1.22',
+137 silly addNameRange     '0.2.0',
+137 silly addNameRange     '0.2.1',
+137 silly addNameRange     '0.2.2',
+137 silly addNameRange     '0.2.3',
+137 silly addNameRange     '0.2.4',
+137 silly addNameRange     '0.2.5',
+137 silly addNameRange     '0.2.6',
+137 silly addNameRange     '0.2.7',
+137 silly addNameRange     '0.2.8',
+137 silly addNameRange     '0.2.9',
+137 silly addNameRange     '0.2.10',
+137 silly addNameRange     '0.3.0',
+137 silly addNameRange     '0.4.0',
+137 silly addNameRange     '0.4.1',
+137 silly addNameRange     '0.5.0',
+137 silly addNameRange     '0.6.0',
+137 silly addNameRange     '0.6.1',
+137 silly addNameRange     '0.6.2',
+137 silly addNameRange     '0.7.0',
+137 silly addNameRange     '0.8.0',
+137 silly addNameRange     '0.9.0',
+137 silly addNameRange     '0.9.2',
+137 silly addNameRange     '1.0.0',
+137 silly addNameRange     '1.1.0',
+137 silly addNameRange     '1.2.0',
+137 silly addNameRange     '1.1.1',
+137 silly addNameRange     '1.2.1',
+137 silly addNameRange     '1.3.0',
+137 silly addNameRange     '1.4.0',
+137 silly addNameRange     '1.4.1',
+137 silly addNameRange     '1.4.2' ] ]
+138 verbose addNamed async@0.1.22
+139 silly addNamed semver.valid 0.1.22
+140 silly addNamed semver.validRange 0.1.22
+141 silly cache afterAdd async@0.1.22
+142 verbose afterAdd C:\Users\NDA86\AppData\Roaming\npm-cache\async\0.1.22\package\package.json not in flight; writing
+143 verbose afterAdd C:\Users\NDA86\AppData\Roaming\npm-cache\async\0.1.22\package\package.json written
+144 http 304 https://registry.npmjs.org/bufferjs
+145 silly get cb [ 304,
+145 silly get   { date: 'Thu, 15 Oct 2015 02:42:09 GMT',
+145 silly get     via: '1.1 varnish',
+145 silly get     'cache-control': 'max-age=60',
+145 silly get     etag: '"2W3GJSAN9S8MSVSA6OZLFQLV5"',
+145 silly get     age: '0',
+145 silly get     connection: 'keep-alive',
+145 silly get     'x-served-by': 'cache-fra1239-FRA',
+145 silly get     'x-cache': 'HIT',
+145 silly get     'x-cache-hits': '1',
+145 silly get     'x-timer': 'S1444876929.238557,VS0,VE705',
+145 silly get     vary: 'Accept' } ]
+146 verbose etag https://registry.npmjs.org/bufferjs from cache
+147 verbose get saving bufferjs to C:\Users\NDA86\AppData\Roaming\npm-cache\registry.npmjs.org\bufferjs\.cache.json
+148 silly addNameRange number 2 { name: 'bufferjs', range: '>=2.0.0 <2.1.0', hasData: true }
+149 silly addNameRange versions [ 'bufferjs',
+149 silly addNameRange   [ '0.2.0',
+149 silly addNameRange     '0.2.1',
+149 silly addNameRange     '0.2.3',
+149 silly addNameRange     '1.0.0',
+149 silly addNameRange     '1.0.1',
+149 silly addNameRange     '1.0.2',
+149 silly addNameRange     '1.1.0',
+149 silly addNameRange     '1.2.0',
+149 silly addNameRange     '1.2.1',
+149 silly addNameRange     '2.0.0' ] ]
+150 verbose addNamed bufferjs@2.0.0
+151 silly addNamed semver.valid 2.0.0
+152 silly addNamed semver.validRange 2.0.0
+153 http 304 https://registry.npmjs.org/temp
+154 silly get cb [ 304,
+154 silly get   { date: 'Thu, 15 Oct 2015 02:42:09 GMT',
+154 silly get     via: '1.1 varnish',
+154 silly get     'cache-control': 'max-age=60',
+154 silly get     etag: '"AUUVTI4BQSDTE95UEITUHGNHC"',
+154 silly get     age: '0',
+154 silly get     connection: 'keep-alive',
+154 silly get     'x-served-by': 'cache-fra1244-FRA',
+154 silly get     'x-cache': 'HIT',
+154 silly get     'x-cache-hits': '1',
+154 silly get     'x-timer': 'S1444876929.227301,VS0,VE733',
+154 silly get     vary: 'Accept' } ]
+155 verbose etag https://registry.npmjs.org/temp from cache
+156 verbose get saving temp to C:\Users\NDA86\AppData\Roaming\npm-cache\registry.npmjs.org\temp\.cache.json
+157 silly addNameRange number 2 { name: 'temp', range: '>=0.4.0 <0.5.0', hasData: true }
+158 silly addNameRange versions [ 'temp',
+158 silly addNameRange   [ '0.2.0',
+158 silly addNameRange     '0.3.0',
+158 silly addNameRange     '0.4.0',
+158 silly addNameRange     '0.5.0',
+158 silly addNameRange     '0.5.1',
+158 silly addNameRange     '0.6.0',
+158 silly addNameRange     '0.7.0',
+158 silly addNameRange     '0.8.0',
+158 silly addNameRange     '0.8.1',
+158 silly addNameRange     '0.8.2',
+158 silly addNameRange     '0.8.3' ] ]
+159 verbose addNamed temp@0.4.0
+160 silly addNamed semver.valid 0.4.0
+161 silly addNamed semver.validRange 0.4.0
+162 silly cache afterAdd bufferjs@2.0.0
+163 verbose afterAdd C:\Users\NDA86\AppData\Roaming\npm-cache\bufferjs\2.0.0\package\package.json not in flight; writing
+164 http 304 https://registry.npmjs.org/bufferstream
+165 silly get cb [ 304,
+165 silly get   { date: 'Thu, 15 Oct 2015 02:42:09 GMT',
+165 silly get     via: '1.1 varnish',
+165 silly get     'cache-control': 'max-age=60',
+165 silly get     etag: '"EF39L4RVY281I2DYGLB0UIOO1"',
+165 silly get     age: '0',
+165 silly get     connection: 'keep-alive',
+165 silly get     'x-served-by': 'cache-fra1224-FRA',
+165 silly get     'x-cache': 'HIT',
+165 silly get     'x-cache-hits': '1',
+165 silly get     'x-timer': 'S1444876929.258269,VS0,VE714',
+165 silly get     vary: 'Accept' } ]
+166 verbose etag https://registry.npmjs.org/bufferstream from cache
+167 verbose get saving bufferstream to C:\Users\NDA86\AppData\Roaming\npm-cache\registry.npmjs.org\bufferstream\.cache.json
+168 verbose afterAdd C:\Users\NDA86\AppData\Roaming\npm-cache\bufferjs\2.0.0\package\package.json written
+169 silly cache afterAdd temp@0.4.0
+170 verbose afterAdd C:\Users\NDA86\AppData\Roaming\npm-cache\temp\0.4.0\package\package.json not in flight; writing
+171 silly addNameRange number 2 { name: 'bufferstream', range: '>=0.5.1 <0.6.0', hasData: true }
+172 silly addNameRange versions [ 'bufferstream',
+172 silly addNameRange   [ '0.0.2',
+172 silly addNameRange     '0.0.3',
+172 silly addNameRange     '0.1.0',
+172 silly addNameRange     '0.1.1',
+172 silly addNameRange     '0.1.2',
+172 silly addNameRange     '0.1.2-1',
+172 silly addNameRange     '0.1.2-2',
+172 silly addNameRange     '0.1.2-3',
+172 silly addNameRange     '0.1.2-4',
+172 silly addNameRange     '0.1.2-5',
+172 silly addNameRange     '0.1.2-6',
+172 silly addNameRange     '0.1.3',
+172 silly addNameRange     '0.1.4',
+172 silly addNameRange     '0.1.5',
+172 silly addNameRange     '0.1.6',
+172 silly addNameRange     '0.2.0',
+172 silly addNameRange     '0.3.0',
+172 silly addNameRange     '0.4.0',
+172 silly addNameRange     '0.4.1',
+172 silly addNameRange     '0.4.2',
+172 silly addNameRange     '0.4.3',
+172 silly addNameRange     '0.4.4',
+172 silly addNameRange     '0.4.5',
+172 silly addNameRange     '0.4.6',
+172 silly addNameRange     '0.4.7',
+172 silly addNameRange     '0.4.8',
+172 silly addNameRange     '0.4.9',
+172 silly addNameRange     '0.4.10',
+172 silly addNameRange     '0.5.0-pre',
+172 silly addNameRange     '0.5.0-pre2',
+172 silly addNameRange     '0.5.0',
+172 silly addNameRange     '0.5.1',
+172 silly addNameRange     '0.5.2',
+172 silly addNameRange     '0.6.0',
+172 silly addNameRange     '0.6.1',
+172 silly addNameRange     '0.6.2' ] ]
+173 verbose addNamed bufferstream@0.5.2
+174 silly addNamed semver.valid 0.5.2
+175 silly addNamed semver.validRange 0.5.2
+176 verbose afterAdd C:\Users\NDA86\AppData\Roaming\npm-cache\temp\0.4.0\package\package.json written
+177 silly cache afterAdd bufferstream@0.5.2
+178 verbose afterAdd C:\Users\NDA86\AppData\Roaming\npm-cache\bufferstream\0.5.2\package\package.json not in flight; writing
+179 verbose afterAdd C:\Users\NDA86\AppData\Roaming\npm-cache\bufferstream\0.5.2\package\package.json written
+180 silly install resolved [ { name: 'async',
+180 silly install resolved     description: 'Higher-order functions and common patterns for asynchronous code',
+180 silly install resolved     main: './index',
+180 silly install resolved     author: { name: 'Caolan McMahon' },
+180 silly install resolved     version: '0.1.22',
+180 silly install resolved     repository: { type: 'git', url: 'git://github.com/caolan/async.git' },
+180 silly install resolved     bugs: { url: 'http://github.com/caolan/async/issues' },
+180 silly install resolved     licenses: [ [Object] ],
+180 silly install resolved     devDependencies: { nodeunit: '>0.0.0', 'uglify-js': '1.2.x', nodelint: '>0.0.0' },
+180 silly install resolved     _npmUser: { name: 'caolan', email: 'caolan@caolanmcmahon.com' },
+180 silly install resolved     _id: 'async@0.1.22',
+180 silly install resolved     dependencies: {},
+180 silly install resolved     optionalDependencies: {},
+180 silly install resolved     engines: { node: '*' },
+180 silly install resolved     _engineSupported: true,
+180 silly install resolved     _npmVersion: '1.1.21',
+180 silly install resolved     _nodeVersion: 'v0.6.18',
+180 silly install resolved     _defaultsLoaded: true,
+180 silly install resolved     dist:
+180 silly install resolved      { shasum: '0fc1aaa088a0e3ef0ebe2d8831bab0dcf8845061',
+180 silly install resolved        tarball: 'http://registry.npmjs.org/async/-/async-0.1.22.tgz' },
+180 silly install resolved     maintainers: [ [Object] ],
+180 silly install resolved     directories: {},
+180 silly install resolved     _shasum: '0fc1aaa088a0e3ef0ebe2d8831bab0dcf8845061',
+180 silly install resolved     _resolved: 'https://registry.npmjs.org/async/-/async-0.1.22.tgz',
+180 silly install resolved     _from: 'async@>=0.1.22 <0.2.0',
+180 silly install resolved     readme: 'ERROR: No README data found!',
+180 silly install resolved     homepage: 'https://github.com/caolan/async' },
+180 silly install resolved   { name: 'bufferjs',
+180 silly install resolved     description: 'Pure JavaScript Buffer utils.',
+180 silly install resolved     url: 'http://github.com/coolaj86/node-bufferjs/',
+180 silly install resolved     keywords: [ 'util', 'buffer', 'chunk', 'indexOf' ],
+180 silly install resolved     author: { name: 'AJ ONeal', email: 'coolaj86@gmail.com' },
+180 silly install resolved     contributors: [ [Object], [Object] ],
+180 silly install resolved     dependencies: {},
+180 silly install resolved     version: '2.0.0',
+180 silly install resolved     main: './index',
+180 silly install resolved     engines: { node: '>=0.2.0' },
+180 silly install resolved     _id: 'bufferjs@2.0.0',
+180 silly install resolved     readme: 'ERROR: No README.md file found!',
+180 silly install resolved     dist:
+180 silly install resolved      { shasum: '685e71ed5c0600e3d703ff9bd012bb3270a39e28',
+180 silly install resolved        tarball: 'http://registry.npmjs.org/bufferjs/-/bufferjs-2.0.0.tgz' },
+180 silly install resolved     _npmVersion: '1.1.63',
+180 silly install resolved     _npmUser: { name: 'coolaj86', email: 'coolaj86@gmail.com' },
+180 silly install resolved     maintainers: [ [Object] ],
+180 silly install resolved     directories: {},
+180 silly install resolved     _shasum: '685e71ed5c0600e3d703ff9bd012bb3270a39e28',
+180 silly install resolved     _resolved: 'https://registry.npmjs.org/bufferjs/-/bufferjs-2.0.0.tgz',
+180 silly install resolved     _from: 'bufferjs@>=2.0.0 <2.1.0' },
+180 silly install resolved   { name: 'temp',
+180 silly install resolved     description: 'Temporary files and directories',
+180 silly install resolved     tags:
+180 silly install resolved      [ 'temporary',
+180 silly install resolved        'temp',
+180 silly install resolved        'tempfile',
+180 silly install resolved        'tempdir',
+180 silly install resolved        'tmpfile',
+180 silly install resolved        'tmpdir',
+180 silly install resolved        'security' ],
+180 silly install resolved     version: '0.4.0',
+180 silly install resolved     author: { name: 'Bruce Williams', email: 'bruce@codefluency.com' },
+180 silly install resolved     directories: { lib: 'lib' },
+180 silly install resolved     engines: [ 'node >=0.4.0' ],
+180 silly install resolved     main: './lib/temp',
+180 silly install resolved     dependencies: {},
+180 silly install resolved     devDependencies: {},
+180 silly install resolved     repository: { type: 'git', url: 'git://github.com/bruce/node-temp.git' },
+180 silly install resolved     _npmUser: { name: 'bruce', email: 'bruce@codefluency.com' },
+180 silly install resolved     _id: 'temp@0.4.0',
+180 silly install resolved     _engineSupported: true,
+180 silly install resolved     _npmVersion: '1.0.106',
+180 silly install resolved     _nodeVersion: 'v0.6.0',
+180 silly install resolved     _defaultsLoaded: true,
+180 silly install resolved     dist:
+180 silly install resolved      { shasum: '671ad63d57be0fe9d7294664b3fc400636678a60',
+180 silly install resolved        tarball: 'http://registry.npmjs.org/temp/-/temp-0.4.0.tgz' },
+180 silly install resolved     maintainers: [ [Object] ],
+180 silly install resolved     _shasum: '671ad63d57be0fe9d7294664b3fc400636678a60',
+180 silly install resolved     _resolved: 'https://registry.npmjs.org/temp/-/temp-0.4.0.tgz',
+180 silly install resolved     _from: 'temp@>=0.4.0 <0.5.0',
+180 silly install resolved     bugs: { url: 'https://github.com/bruce/node-temp/issues' },
+180 silly install resolved     readme: 'ERROR: No README data found!',
+180 silly install resolved     homepage: 'https://github.com/bruce/node-temp' },
+180 silly install resolved   { name: 'bufferstream',
+180 silly install resolved     description: 'painless stream buffering and cutting',
+180 silly install resolved     version: '0.5.2',
+180 silly install resolved     homepage: 'https://github.com/dodo/node-bufferstream',
+180 silly install resolved     author: { name: 'dodo', url: 'https://github.com/dodo' },
+180 silly install resolved     repository:
+180 silly install resolved      { type: 'git',
+180 silly install resolved        url: 'git://github.com/dodo/node-bufferstream.git' },
+180 silly install resolved     main: 'bufferstream.js',
+180 silly install resolved     engines: { node: '>= 0.4.x' },
+180 silly install resolved     keywords: [ 'buffer', 'buffers', 'stream', 'streams' ],
+180 silly install resolved     scripts:
+180 silly install resolved      { test: 'cake build && nodeunit test',
+180 silly install resolved        prepublish: 'cake build' },
+180 silly install resolved     dependencies: { buffertools: '>= 1.0.3' },
+180 silly install resolved     devDependencies:
+180 silly install resolved      { nodeunit: '>= 0.5.4',
+180 silly install resolved        muffin: '>= 0.2.6',
+180 silly install resolved        'coffee-script': '>= 1.1.2',
+180 silly install resolved        cli: '>= 0.3.7',
+180 silly install resolved        express: '>= 2.4.5' },
+180 silly install resolved     licenses: [ [Object] ],
+180 silly install resolved     readme: '# BufferStream\n\npainless stream buffering, cutting and piping.\n\n## install\n\n    npm install bufferstream\n\n## api\n\nBufferStream is a full node.js [Stream](http://nodejs.org/docs/v0.4.7/api/streams.html) so it has apis of both [Writeable Stream](http://nodejs.org/docs/v0.4.7/api/streams.html#writable_Stream) and [Readable Stream](http://nodejs.org/docs/v0.4.7/api/streams.html#readable_Stream).\n\n### BufferStream\n\n```javascript\nBufferStream = require(\'bufferstream\')\nstream = new BufferStream([{encoding:\'utf8\', size:\'none\'}]) // default\n```\n * `encoding` default encoding for writing strings\n * `blocking` if true and the source is a child_process the stream will block the entire process (timeouts wont work anymore, but splitting and listening on data still works, because they work sync)\n * `size` defines buffer level or sets buffer to given size (see ↓`setSize` for more)\n * `disabled` immediately call disable\n * `split` short form for:\n\n```javascript\nstream.split(token, function (chunk) {stream.emit(\'data\', chunk)})\n```\n\n### stream.setSize\n\n```javascript\nstream.setSize(size) // can be one of [\'none\', \'flexible\', <number>]\n```\n\ndifferent buffer behaviors can be triggered by size:\n\n * `none` when output drains, bufferstream drains too\n * `flexible` buffers everthing that it gets and not piping out\n * `<number>` `TODO` buffer has given size. buffers everthing until buffer is full. when buffer is full then  the stream will drain\n\n### stream.enable\n\n```javascript\nstream.enable()\n```\n\nenables stream buffering __default__\n\n### stream.disable\n\n```javascript\nstream.disable()\n```\n\nflushes buffer and disables stream buffering.\nBufferStream now pipes all data as long as the output accepting data.\nwhen the output is draining BufferStream will buffer all input temporary.\n\n```javascript\nstream.disable(token, ...)\nstream.disable(tokens) // Array\n```\n * `token[s]` buffer splitters (should be String or Buffer)\n\ndisables given tokens. wont flush until no splitter tokens are left.\n\n### stream.split\n\n```javascript\nstream.split(token, ...)\nstream.split(tokens) // Array\n```\n * `token[s]` buffer splitters (should be String or Buffer)\n\neach time BufferStream finds a splitter token in the input data it will emit a __split__ event.\nthis also works for binary data.\n\n### Event: \'split\'\n\n```javascript\nstream.on(\'split\', function (chunk, token) {…})\nstream.split(token, function (chunk, token) {…}) // only get called for this particular token\n```\n\nwhenever the stream is enabled it will try to find all splitter token in `stream.buffer`,\ncut it off and emit the chunk (without token) as __split__ event.\nthis data will be lost when not handled.\n\nthe chunk is the cut off of `stream.buffer` without the token.\n\n__Warning:__ try to avoid calling `stream.emit(\'data\', newchunk)` more than one time, because this will likely throw `Error: Offset is out of bounds`.\n\n### stream.getBuffer\n\n```javascript\nstream.getBuffer()\n// or just\nstream.buffer\n```\n\nreturns its [Buffer](http://nodejs.org/docs/v0.4.7/api/buffers.html).\n\n### stream.toString\n\n```javascript\nstream.toString()\n```\n\nshortcut for `stream.buffer.toString()`\n\n### stream.length\n\n```javascript\nstream.length\n```\n\nshortcut for `stream.buffer.length`\n\n### PostBuffer\n\n```javascript\nPostBuffer = require(\'bufferstream/postbuffer\')\npost = new PostBuffer(req)\n```\n * `req` http.ServerRequest\n\nfor if you want to get all the post data from a http server request and do some db reqeust before.\n\nbuffer http client\n\n### post.onEnd\n\n```javascript\npost.onEnd(function (data) {…});\n```\n\nset a callback to get all post data from a http server request\n\n### post.pipe\n\n```javascript\npost.pipe(stream, options);\n```\n\npumps data into another stream to allow incoming streams\ngiven options will be passed to Stream.pipe\n\n## example\n\n```javascript\nBufferStream = require(\'bufferstream\')\nstream = new BufferStream({encoding:\'utf8\', size:\'flexible\'})\nstream.split(\'//\', \':\')\nstream.on(\'split\', function (chunk, token) {\n    console.log("got \'%s\' by \'%s\'", chunk.toString(), token.toString())\n})\nstream.write("buffer:stream//23")\nconsole.log(stream.toString())\n```\n\nresults in\n\n    got \'buffer\' by \':\'\n    got \'stream\' by \'//\'\n    23\n\n* https://github.com/dodo/node-bufferstream/blob/master/example/split.js\n\n## FAQ\n\n> I\'m not sure from your readme what the split event emits?\n\nyou can specify more than one split token .. so it\'s emitted whenever\na token is found.\n\n> does it emit the buffer up to the just before the token starts?\n\nyes.\n\n> also, does it join buffers together if they do not already end in a token?\n\nwhen size is `flexible` it joins everything together what it gets to\none buffer (accessible through `stream.buffer` or\n`stream.getBuffer()`)\nwhenever it gets data, it will try to find all tokens\n\n> in other words, can I use this to rechunk a stream so that the chunks always break on newlines, for example?\n\nyes.\n\n```javascript\nstream = new BufferStream({size:\'flexible\'});\nstream.split(\'\\n\', function (line) { // line doesn\'t have a \'\\n\' anymore\n    stream.emit(\'data\', line); // Buffer.isBuffer(line) === true\n});\n```\n\n[![Build Status](https://secure.travis-ci.org/dodo/node-bufferstream.png)](http://travis-ci.org/dodo/node-bufferstream)\n',
+180 silly install resolved     readmeFilename: 'README.md',
+180 silly install resolved     _id: 'bufferstream@0.5.2',
+180 silly install resolved     dist:
+180 silly install resolved      { shasum: '599c9224e6690c42a5cd5dea96511bf09d0094fc',
+180 silly install resolved        tarball: 'http://registry.npmjs.org/bufferstream/-/bufferstream-0.5.2.tgz' },
+180 silly install resolved     _from: 'bufferstream@>=0.5.1 <0.6.0',
+180 silly install resolved     _npmVersion: '1.2.18',
+180 silly install resolved     _npmUser: { name: 'dodo', email: 'dodo@blacksec.org' },
+180 silly install resolved     maintainers: [ [Object] ],
+180 silly install resolved     directories: {},
+180 silly install resolved     _shasum: '599c9224e6690c42a5cd5dea96511bf09d0094fc',
+180 silly install resolved     _resolved: 'https://registry.npmjs.org/bufferstream/-/bufferstream-0.5.2.tgz',
+180 silly install resolved     bugs: { url: 'https://github.com/dodo/node-bufferstream/issues' } } ]
+181 info install async@0.1.22 into d:\set\Remedium\remedium\node_modules\spindrift
+182 info install bufferjs@2.0.0 into d:\set\Remedium\remedium\node_modules\spindrift
+183 info install temp@0.4.0 into d:\set\Remedium\remedium\node_modules\spindrift
+184 info install bufferstream@0.5.2 into d:\set\Remedium\remedium\node_modules\spindrift
+185 info installOne async@0.1.22
+186 verbose installOne of async to d:\set\Remedium\remedium\node_modules\spindrift not in flight; installing
+187 info installOne bufferjs@2.0.0
+188 verbose installOne of bufferjs to d:\set\Remedium\remedium\node_modules\spindrift not in flight; installing
+189 info installOne temp@0.4.0
+190 verbose installOne of temp to d:\set\Remedium\remedium\node_modules\spindrift not in flight; installing
+191 info installOne bufferstream@0.5.2
+192 verbose installOne of bufferstream to d:\set\Remedium\remedium\node_modules\spindrift not in flight; installing
+193 verbose lock using C:\Users\NDA86\AppData\Roaming\npm-cache\_locks\bufferjs-200ce487d4d122f5.lock for d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferjs
+194 verbose lock using C:\Users\NDA86\AppData\Roaming\npm-cache\_locks\async-4884765dc9912a53.lock for d:\set\Remedium\remedium\node_modules\spindrift\node_modules\async
+195 verbose lock using C:\Users\NDA86\AppData\Roaming\npm-cache\_locks\temp-a2fa4a49c7afd957.lock for d:\set\Remedium\remedium\node_modules\spindrift\node_modules\temp
+196 verbose lock using C:\Users\NDA86\AppData\Roaming\npm-cache\_locks\bufferstream-767f4efbb1949d5e.lock for d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferstream
+197 silly install write writing bufferjs 2.0.0 to d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferjs
+198 silly cache addNamed cb bufferjs@2.0.0
+199 verbose unbuild node_modules\spindrift\node_modules\bufferjs
+200 silly install write writing async 0.1.22 to d:\set\Remedium\remedium\node_modules\spindrift\node_modules\async
+201 silly cache addNamed cb async@0.1.22
+202 verbose unbuild node_modules\spindrift\node_modules\async
+203 silly install write writing temp 0.4.0 to d:\set\Remedium\remedium\node_modules\spindrift\node_modules\temp
+204 silly cache addNamed cb temp@0.4.0
+205 verbose unbuild node_modules\spindrift\node_modules\temp
+206 silly install write writing bufferstream 0.5.2 to d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferstream
+207 silly cache addNamed cb bufferstream@0.5.2
+208 verbose unbuild node_modules\spindrift\node_modules\bufferstream
+209 verbose gentlyRm vacuuming d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferjs
+210 verbose gentlyRm vacuuming d:\set\Remedium\remedium\node_modules\spindrift\node_modules\async
+211 verbose gentlyRm vacuuming d:\set\Remedium\remedium\node_modules\spindrift\node_modules\temp
+212 verbose gentlyRm vacuuming d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferstream
+213 verbose tar unpack C:\Users\NDA86\AppData\Roaming\npm-cache\bufferjs\2.0.0\package.tgz
+214 verbose tar unpacking to d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferjs
+215 verbose gentlyRm vacuuming d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferjs
+216 verbose tar unpack C:\Users\NDA86\AppData\Roaming\npm-cache\async\0.1.22\package.tgz
+217 verbose tar unpacking to d:\set\Remedium\remedium\node_modules\spindrift\node_modules\async
+218 verbose gentlyRm vacuuming d:\set\Remedium\remedium\node_modules\spindrift\node_modules\async
+219 verbose tar unpack C:\Users\NDA86\AppData\Roaming\npm-cache\temp\0.4.0\package.tgz
+220 verbose tar unpacking to d:\set\Remedium\remedium\node_modules\spindrift\node_modules\temp
+221 verbose gentlyRm vacuuming d:\set\Remedium\remedium\node_modules\spindrift\node_modules\temp
+222 verbose tar unpack C:\Users\NDA86\AppData\Roaming\npm-cache\bufferstream\0.5.2\package.tgz
+223 verbose tar unpacking to d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferstream
+224 verbose gentlyRm vacuuming d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferstream
+225 silly gunzTarPerm modes [ '777', '666' ]
+226 silly gunzTarPerm modes [ '777', '666' ]
+227 silly gunzTarPerm modes [ '777', '666' ]
+228 silly gunzTarPerm modes [ '777', '666' ]
+229 silly gunzTarPerm extractEntry package.json
+230 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+231 silly gunzTarPerm extractEntry add-chunk.js
+232 silly gunzTarPerm modified mode [ 'add-chunk.js', 420, 438 ]
+233 silly gunzTarPerm extractEntry index.js
+234 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+235 silly gunzTarPerm extractEntry .gitignore
+236 silly gunzTarPerm modified mode [ '.gitignore', 420, 438 ]
+237 silly gunzTarPerm extractEntry package.json
+238 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+239 silly gunzTarPerm extractEntry LICENSE
+240 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+241 silly gunzTarPerm extractEntry package.json
+242 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+243 silly gunzTarPerm extractEntry .npmignore
+244 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+245 silly gunzTarPerm extractEntry README.md
+246 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+247 silly gunzTarPerm extractEntry indexOf.js
+248 silly gunzTarPerm modified mode [ 'indexOf.js', 420, 438 ]
+249 silly gunzTarPerm extractEntry package.json
+250 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+251 silly gunzTarPerm extractEntry README.md
+252 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+253 silly gunzTarPerm extractEntry examples/grepcount.js
+254 silly gunzTarPerm modified mode [ 'examples/grepcount.js', 420, 438 ]
+255 silly gunzTarPerm extractEntry .npmignore
+256 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+257 silly gunzTarPerm extractEntry README.md
+258 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+259 silly gunzTarPerm extractEntry LICENSE
+260 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+261 silly gunzTarPerm extractEntry events.js
+262 silly gunzTarPerm modified mode [ 'events.js', 420, 438 ]
+263 silly gunzTarPerm extractEntry LICENSE
+264 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+265 silly gunzTarPerm extractEntry examples/pdfcreator.js
+266 silly gunzTarPerm modified mode [ 'examples/pdfcreator.js', 420, 438 ]
+267 silly gunzTarPerm extractEntry lib/temp.js
+268 silly gunzTarPerm modified mode [ 'lib/temp.js', 420, 438 ]
+269 silly gunzTarPerm extractEntry postbuffer.js
+270 silly gunzTarPerm modified mode [ 'postbuffer.js', 420, 438 ]
+271 silly gunzTarPerm extractEntry bufferstream.js
+272 silly gunzTarPerm modified mode [ 'bufferstream.js', 420, 438 ]
+273 silly gunzTarPerm extractEntry index.js
+274 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+275 silly gunzTarPerm extractEntry Makefile
+276 silly gunzTarPerm modified mode [ 'Makefile', 420, 438 ]
+277 silly gunzTarPerm extractEntry lib/async.js
+278 silly gunzTarPerm modified mode [ 'lib/async.js', 420, 438 ]
+279 silly gunzTarPerm extractEntry test/temp-test.js
+280 silly gunzTarPerm modified mode [ 'test/temp-test.js', 420, 438 ]
+281 info preinstall bufferjs@2.0.0
+282 silly gunzTarPerm extractEntry todo
+283 silly gunzTarPerm modified mode [ 'todo', 420, 438 ]
+284 silly gunzTarPerm extractEntry ..travis.yml.un~
+285 silly gunzTarPerm modified mode [ '..travis.yml.un~', 420, 438 ]
+286 silly gunzTarPerm extractEntry lib/fn.js
+287 silly gunzTarPerm modified mode [ 'lib/fn.js', 420, 438 ]
+288 silly gunzTarPerm extractEntry lib/buffer-stream.js
+289 silly gunzTarPerm modified mode [ 'lib/buffer-stream.js', 420, 438 ]
+290 silly gunzTarPerm extractEntry lib/post-buffer.js
+291 silly gunzTarPerm modified mode [ 'lib/post-buffer.js', 420, 438 ]
+292 silly gunzTarPerm extractEntry .travis.yml
+293 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+294 silly gunzTarPerm extractEntry test/stream.js
+295 silly gunzTarPerm modified mode [ 'test/stream.js', 420, 438 ]
+296 silly gunzTarPerm extractEntry test/buffer.js
+297 silly gunzTarPerm modified mode [ 'test/buffer.js', 420, 438 ]
+298 silly install resolved []
+299 verbose about to build d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferjs
+300 info build d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferjs
+301 verbose linkStuff [ false,
+301 verbose linkStuff   false,
+301 verbose linkStuff   false,
+301 verbose linkStuff   'd:\\set\\Remedium\\remedium\\node_modules\\spindrift\\node_modules' ]
+302 info linkStuff bufferjs@2.0.0
+303 verbose linkBins bufferjs@2.0.0
+304 verbose linkMans bufferjs@2.0.0
+305 verbose rebuildBundles bufferjs@2.0.0
+306 info install bufferjs@2.0.0
+307 info postinstall bufferjs@2.0.0
+308 verbose unlock done using C:\Users\NDA86\AppData\Roaming\npm-cache\_locks\bufferjs-200ce487d4d122f5.lock for d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferjs
+309 silly gunzTarPerm extractEntry .gitmodules
+310 silly gunzTarPerm modified mode [ '.gitmodules', 420, 438 ]
+311 info preinstall temp@0.4.0
+312 silly install resolved []
+313 verbose about to build d:\set\Remedium\remedium\node_modules\spindrift\node_modules\temp
+314 info build d:\set\Remedium\remedium\node_modules\spindrift\node_modules\temp
+315 verbose linkStuff [ false,
+315 verbose linkStuff   false,
+315 verbose linkStuff   false,
+315 verbose linkStuff   'd:\\set\\Remedium\\remedium\\node_modules\\spindrift\\node_modules' ]
+316 info linkStuff temp@0.4.0
+317 verbose linkBins temp@0.4.0
+318 verbose linkMans temp@0.4.0
+319 verbose rebuildBundles temp@0.4.0
+320 info install temp@0.4.0
+321 info postinstall temp@0.4.0
+322 verbose unlock done using C:\Users\NDA86\AppData\Roaming\npm-cache\_locks\temp-a2fa4a49c7afd957.lock for d:\set\Remedium\remedium\node_modules\spindrift\node_modules\temp
+323 info preinstall async@0.1.22
+324 silly install resolved []
+325 verbose about to build d:\set\Remedium\remedium\node_modules\spindrift\node_modules\async
+326 info build d:\set\Remedium\remedium\node_modules\spindrift\node_modules\async
+327 verbose linkStuff [ false,
+327 verbose linkStuff   false,
+327 verbose linkStuff   false,
+327 verbose linkStuff   'd:\\set\\Remedium\\remedium\\node_modules\\spindrift\\node_modules' ]
+328 info linkStuff async@0.1.22
+329 verbose linkBins async@0.1.22
+330 verbose linkMans async@0.1.22
+331 verbose rebuildBundles async@0.1.22
+332 info install async@0.1.22
+333 info postinstall async@0.1.22
+334 verbose unlock done using C:\Users\NDA86\AppData\Roaming\npm-cache\_locks\async-4884765dc9912a53.lock for d:\set\Remedium\remedium\node_modules\spindrift\node_modules\async
+335 info preinstall bufferstream@0.5.2
+336 silly prepareForInstallMany adding buffertools@>= 1.0.3 from bufferstream dependencies
+337 silly cache add args [ 'buffertools@>= 1.0.3', null ]
+338 verbose cache add spec buffertools@>= 1.0.3
+339 silly cache add parsed spec { raw: 'buffertools@>= 1.0.3',
+339 silly cache add   scope: null,
+339 silly cache add   name: 'buffertools',
+339 silly cache add   rawSpec: '>= 1.0.3',
+339 silly cache add   spec: '>=1.0.3',
+339 silly cache add   type: 'range' }
+340 verbose addNamed buffertools@>=1.0.3
+341 silly addNamed semver.valid null
+342 silly addNamed semver.validRange >=1.0.3
+343 silly addNameRange { name: 'buffertools', range: '>=1.0.3', hasData: false }
+344 silly mapToRegistry name buffertools
+345 silly mapToRegistry using default registry
+346 silly mapToRegistry registry https://registry.npmjs.org/
+347 silly mapToRegistry uri https://registry.npmjs.org/buffertools
+348 verbose addNameRange registry:https://registry.npmjs.org/buffertools not in flight; fetching
+349 verbose request uri https://registry.npmjs.org/buffertools
+350 verbose request no auth needed
+351 info attempt registry request try #1 at 10:42:12
+352 verbose etag "9VDTYSK63F6SIN5VJAOVPP7BU"
+353 http request GET https://registry.npmjs.org/buffertools
+354 http 304 https://registry.npmjs.org/buffertools
+355 silly get cb [ 304,
+355 silly get   { date: 'Thu, 15 Oct 2015 02:42:10 GMT',
+355 silly get     via: '1.1 varnish',
+355 silly get     'cache-control': 'max-age=60',
+355 silly get     etag: '"9VDTYSK63F6SIN5VJAOVPP7BU"',
+355 silly get     age: '0',
+355 silly get     connection: 'keep-alive',
+355 silly get     'x-served-by': 'cache-fra1246-FRA',
+355 silly get     'x-cache': 'MISS',
+355 silly get     'x-cache-hits': '0',
+355 silly get     'x-timer': 'S1444876930.841742,VS0,VE709',
+355 silly get     vary: 'Accept' } ]
+356 verbose etag https://registry.npmjs.org/buffertools from cache
+357 verbose get saving buffertools to C:\Users\NDA86\AppData\Roaming\npm-cache\registry.npmjs.org\buffertools\.cache.json
+358 silly addNameRange number 2 { name: 'buffertools', range: '>=1.0.3', hasData: true }
+359 silly addNameRange versions [ 'buffertools',
+359 silly addNameRange   [ '1.0.0',
+359 silly addNameRange     '1.0.1',
+359 silly addNameRange     '1.0.2',
+359 silly addNameRange     '1.0.3',
+359 silly addNameRange     '1.0.4',
+359 silly addNameRange     '1.0.5',
+359 silly addNameRange     '1.0.6',
+359 silly addNameRange     '1.0.7',
+359 silly addNameRange     '1.0.8',
+359 silly addNameRange     '1.0.9',
+359 silly addNameRange     '1.1.0',
+359 silly addNameRange     '1.1.1',
+359 silly addNameRange     '2.0.0',
+359 silly addNameRange     '2.0.1',
+359 silly addNameRange     '2.1.0',
+359 silly addNameRange     '2.1.1',
+359 silly addNameRange     '2.1.2',
+359 silly addNameRange     '2.1.3' ] ]
+360 verbose addNamed buffertools@2.1.3
+361 silly addNamed semver.valid 2.1.3
+362 silly addNamed semver.validRange 2.1.3
+363 silly cache afterAdd buffertools@2.1.3
+364 verbose afterAdd C:\Users\NDA86\AppData\Roaming\npm-cache\buffertools\2.1.3\package\package.json not in flight; writing
+365 verbose afterAdd C:\Users\NDA86\AppData\Roaming\npm-cache\buffertools\2.1.3\package\package.json written
+366 silly install resolved [ { name: 'buffertools',
+366 silly install resolved     main: 'buffertools',
+366 silly install resolved     version: '2.1.3',
+366 silly install resolved     keywords: [ 'buffer', 'buffers' ],
+366 silly install resolved     description: 'Working with node.js buffers made easy.',
+366 silly install resolved     homepage: 'https://github.com/bnoordhuis/node-buffertools',
+366 silly install resolved     author:
+366 silly install resolved      { name: 'Ben Noordhuis',
+366 silly install resolved        email: 'info@bnoordhuis.nl',
+366 silly install resolved        url: 'http://bnoordhuis.nl/' },
+366 silly install resolved     repository:
+366 silly install resolved      { type: 'git',
+366 silly install resolved        url: 'git+https://github.com/bnoordhuis/node-buffertools.git' },
+366 silly install resolved     engines: { node: '>=0.3.0' },
+366 silly install resolved     scripts: { test: 'node test.js', install: 'node-gyp rebuild' },
+366 silly install resolved     license: 'ISC',
+366 silly install resolved     gypfile: true,
+366 silly install resolved     contributors: [ [Object], [Object], [Object], [Object], [Object] ],
+366 silly install resolved     gitHead: '1912a927cbab036ccb06204586282a60db38f97a',
+366 silly install resolved     bugs: { url: 'https://github.com/bnoordhuis/node-buffertools/issues' },
+366 silly install resolved     _id: 'buffertools@2.1.3',
+366 silly install resolved     _shasum: '34d3bf0565ed79e29877c2a6217ccfce9a3b3423',
+366 silly install resolved     _from: 'buffertools@>=1.0.3',
+366 silly install resolved     _npmVersion: '2.11.3',
+366 silly install resolved     _nodeVersion: '2.3.2-pre',
+366 silly install resolved     _npmUser: { name: 'bnoordhuis', email: 'info@bnoordhuis.nl' },
+366 silly install resolved     maintainers: [ [Object] ],
+366 silly install resolved     dist:
+366 silly install resolved      { shasum: '34d3bf0565ed79e29877c2a6217ccfce9a3b3423',
+366 silly install resolved        tarball: 'http://registry.npmjs.org/buffertools/-/buffertools-2.1.3.tgz' },
+366 silly install resolved     directories: {},
+366 silly install resolved     _resolved: 'https://registry.npmjs.org/buffertools/-/buffertools-2.1.3.tgz',
+366 silly install resolved     readme: 'ERROR: No README data found!' } ]
+367 info install buffertools@2.1.3 into d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferstream
+368 info installOne buffertools@2.1.3
+369 verbose installOne of buffertools to d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferstream not in flight; installing
+370 verbose lock using C:\Users\NDA86\AppData\Roaming\npm-cache\_locks\buffertools-966ab938cc5f1d26.lock for d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferstream\node_modules\buffertools
+371 silly install write writing buffertools 2.1.3 to d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferstream\node_modules\buffertools
+372 silly cache addNamed cb buffertools@2.1.3
+373 verbose unbuild node_modules\spindrift\node_modules\bufferstream\node_modules\buffertools
+374 verbose gentlyRm vacuuming d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferstream\node_modules\buffertools
+375 verbose tar unpack C:\Users\NDA86\AppData\Roaming\npm-cache\buffertools\2.1.3\package.tgz
+376 verbose tar unpacking to d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferstream\node_modules\buffertools
+377 verbose gentlyRm vacuuming d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferstream\node_modules\buffertools
+378 silly gunzTarPerm modes [ '777', '666' ]
+379 silly gunzTarPerm extractEntry package.json
+380 silly gunzTarPerm modified mode [ 'package.json', 436, 438 ]
+381 silly gunzTarPerm extractEntry .npmignore
+382 silly gunzTarPerm modified mode [ '.npmignore', 436, 438 ]
+383 silly gunzTarPerm extractEntry README.md
+384 silly gunzTarPerm modified mode [ 'README.md', 436, 438 ]
+385 silly gunzTarPerm extractEntry LICENSE
+386 silly gunzTarPerm modified mode [ 'LICENSE', 436, 438 ]
+387 silly gunzTarPerm extractEntry buffertools.js
+388 silly gunzTarPerm modified mode [ 'buffertools.js', 436, 438 ]
+389 silly gunzTarPerm extractEntry test.js
+390 silly gunzTarPerm modified mode [ 'test.js', 436, 438 ]
+391 silly gunzTarPerm extractEntry binding.gyp
+392 silly gunzTarPerm modified mode [ 'binding.gyp', 436, 438 ]
+393 silly gunzTarPerm extractEntry buffertools.cc
+394 silly gunzTarPerm modified mode [ 'buffertools.cc', 436, 438 ]
+395 silly gunzTarPerm extractEntry BoyerMoore.h
+396 silly gunzTarPerm modified mode [ 'BoyerMoore.h', 436, 438 ]
+397 silly gunzTarPerm extractEntry AUTHORS
+398 silly gunzTarPerm modified mode [ 'AUTHORS', 436, 438 ]
+399 silly gunzTarPerm extractEntry .mailmap
+400 silly gunzTarPerm modified mode [ '.mailmap', 436, 438 ]
+401 info preinstall buffertools@2.1.3
+402 silly install resolved []
+403 verbose about to build d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferstream\node_modules\buffertools
+404 info build d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferstream\node_modules\buffertools
+405 verbose linkStuff [ false,
+405 verbose linkStuff   false,
+405 verbose linkStuff   false,
+405 verbose linkStuff   'd:\\set\\Remedium\\remedium\\node_modules\\spindrift\\node_modules\\bufferstream\\node_modules' ]
+406 info linkStuff buffertools@2.1.3
+407 verbose linkBins buffertools@2.1.3
+408 verbose linkMans buffertools@2.1.3
+409 verbose rebuildBundles buffertools@2.1.3
+410 info install buffertools@2.1.3
+411 verbose unsafe-perm in lifecycle true
+412 info buffertools@2.1.3 Failed to exec install script
+413 verbose unlock done using C:\Users\NDA86\AppData\Roaming\npm-cache\_locks\buffertools-966ab938cc5f1d26.lock for d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferstream\node_modules\buffertools
+414 verbose about to build d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferstream
+415 verbose unlock done using C:\Users\NDA86\AppData\Roaming\npm-cache\_locks\bufferstream-767f4efbb1949d5e.lock for d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferstream
+416 verbose about to build d:\set\Remedium\remedium\node_modules\spindrift
+417 verbose unlock done using C:\Users\NDA86\AppData\Roaming\npm-cache\_locks\spindrift-32fb9046b626b1cc.lock for d:\set\Remedium\remedium\node_modules\spindrift
+418 verbose stack Error: buffertools@2.1.3 install: `node-gyp rebuild`
+418 verbose stack Exit status 1
+418 verbose stack     at EventEmitter.<anonymous> (c:\Program Files (x86)\nodejs\node_modules\npm\lib\utils\lifecycle.js:213:16)
+418 verbose stack     at EventEmitter.emit (events.js:110:17)
+418 verbose stack     at ChildProcess.<anonymous> (c:\Program Files (x86)\nodejs\node_modules\npm\lib\utils\spawn.js:14:12)
+418 verbose stack     at ChildProcess.emit (events.js:110:17)
+418 verbose stack     at maybeClose (child_process.js:1008:16)
+418 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1080:5)
+419 verbose pkgid buffertools@2.1.3
+420 verbose cwd d:\set\Remedium\remedium
+421 error Windows_NT 6.3.9600
+422 error argv "c:\\Program Files (x86)\\nodejs\\node.exe" "c:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "spindrift" "--save"
+423 error node v0.12.0
+424 error npm  v2.5.1
+425 error code ELIFECYCLE
+426 error buffertools@2.1.3 install: `node-gyp rebuild`
+426 error Exit status 1
+427 error Failed at the buffertools@2.1.3 install script 'node-gyp rebuild'.
+427 error This is most likely a problem with the buffertools package,
+427 error not with npm itself.
+427 error Tell the author that this fails on your system:
+427 error     node-gyp rebuild
+427 error You can get their info via:
+427 error     npm owner ls buffertools
+427 error There is likely additional logging output above.
+428 verbose exit [ 1, true ]
+429 verbose unbuild node_modules\spindrift\node_modules\bufferstream\node_modules\buffertools
+430 info preuninstall buffertools@2.1.3
+431 info uninstall buffertools@2.1.3
+432 verbose unbuild rmStuff buffertools@2.1.3 from d:\set\Remedium\remedium\node_modules
+433 verbose unbuild rmStuff in d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferstream\node_modules
+434 info postuninstall buffertools@2.1.3
+435 verbose gentlyRm vacuuming d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferstream\node_modules\buffertools
+436 silly gentlyRm purging d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferstream\node_modules\buffertools
+437 silly gentlyRm removing d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferstream\node_modules
+438 silly gentlyRm quitting because other entries in d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferstream
+439 verbose unbuild node_modules\spindrift\node_modules\bufferstream
+440 info preuninstall bufferstream@0.5.2
+441 info uninstall bufferstream@0.5.2
+442 verbose unbuild rmStuff bufferstream@0.5.2 from d:\set\Remedium\remedium\node_modules
+443 verbose unbuild rmStuff in d:\set\Remedium\remedium\node_modules\spindrift\node_modules
+444 info postuninstall bufferstream@0.5.2
+445 verbose gentlyRm vacuuming d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferstream
+446 silly gentlyRm purging d:\set\Remedium\remedium\node_modules\spindrift\node_modules\bufferstream
+447 silly gentlyRm quitting because other entries in d:\set\Remedium\remedium\node_modules\spindrift\node_modules
+448 verbose unbuild node_modules\spindrift
+449 info preuninstall spindrift@0.0.6
+450 info uninstall spindrift@0.0.6
+451 verbose unbuild rmStuff spindrift@0.0.6 from d:\set\Remedium\remedium\node_modules
+452 info postuninstall spindrift@0.0.6
+453 verbose gentlyRm vacuuming d:\set\Remedium\remedium\node_modules\spindrift
+454 silly gentlyRm purging d:\set\Remedium\remedium\node_modules\spindrift
+455 silly gentlyRm quitting because other entries in d:\set\Remedium\remedium\node_modules

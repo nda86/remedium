@@ -26,7 +26,8 @@ fs.renameSync(source_dir + fileName, tmp_dir + fileName);
 		//переводим объект с текстом в простой string
 		pages = pages.toString();
 		// регулярка для поиска номера анализа, используеся для имени файла
-		var re = /\nЗаявка: (БрРМ\/.*\/\d*)/i;
+		var re = /Заявка: (.*\/?.*\/\d*)/i;
+		var re_name = /Пациент:\s*(\w*)/i;
 		// находим номер анализа
 		var result = re.exec(pages);
 		// меняем в номере анализа / на _

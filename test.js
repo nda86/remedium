@@ -5,7 +5,7 @@ var extract = require('pdf-text-extract');
 var fs = require('fs-extra');
 
 // плагин для сплита pdf
-var spindrift = require('spindrift');
+// var spindrift = require('spindrift');
 
 // для поиска файлов по расширению
 var glob = require('glob');
@@ -19,6 +19,12 @@ var timer = config.timer;
 // console.log(success_dir);
 // console.log(tmp_dir);
 // console.log(timer);
+
+//  МАССИВ  КОДОВ
+var codeObj = {
+	name: '',
+	indexRepeat: 1
+};
 
 function do_export_pdf (fileName) {
 	// пермещаем pdf в tmp папку для обработки
@@ -35,14 +41,30 @@ function do_export_pdf (fileName) {
 		// регулярка для поиска номера анализа, используеся для имени файла
 		var re = /Заявка: (БрРМ\/.*\/\d*)/ig;
 
+		// регулярка для поиска имени
+		var re_name = /Пациент:\s*(.*)/i;
+
+
 		while ((result = re.exec(pages)) !== null){
 			count++;
-			// содаём имя для pdf
-			var name = result[1].replace(/\//g,"_");
+
+			var name = '';
+		// содаём имя для pdf
+			// код(номер) анализа
+			var number = result[1].replace(/\//g,"_");
+			// фио пациента
+			var fio = re_name.exec(pages);
+			if (fio !== null){
+				name = number + " - " + fio[1];
+			}else{
+				name = number;
+			}
+
+			fs.copySync(tmp_dir + fileName, success_dir + name + ".pdf");
 			// вырезаем страничку с анализом
-			var pdf = spindrift(tmp_dir + fileName).page(count);
+			// var pdf = spindrift(tmp_dir + fileName).page(count);
 			// сохраняем анализ с новым именем
-			pdf.pdfStream().pipe(fs.createWriteStream(success_dir + name + ".pdf"))
+			// pdf.pdfStream().pipe(fs.createWriteStream(success_dir + name + ".pdf"))
 		}
 		console.log('nop');
 	});
