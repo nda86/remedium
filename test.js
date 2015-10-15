@@ -15,17 +15,12 @@ var success_dir = config.success_dir;
 var tmp_dir = config.tmp_dir;
 var timer = config.timer;
 
-// console.log(source_dir);
-// console.log(success_dir);
-// console.log(tmp_dir);
-// console.log(timer);
-
 function Code(){};
 
 var arrCode = [];
 
 function do_export_pdf (fileName) {
-	// пермещаем pdf в tmp папку для обработки
+	// перемещаем pdf в tmp папку для обработки
 	fs.renameSync(source_dir + fileName, tmp_dir + fileName);
 	//переводим pdf в txt
 	extract(tmp_dir + fileName, function(err, pages){
@@ -37,7 +32,7 @@ function do_export_pdf (fileName) {
 		// инит счётчика страниц
 		var count = 0;
 		// регулярка для поиска номера анализа, используеся для имени файла
-		var re = /Заявка: (БрРМ\/.*\/\d*)/ig;
+		var re = /Заявка:\s*(.*\/.*\/\d*)/ig;
 
 		// регулярка для поиска имени
 		var re_name = /Пациент:\s*(.*)/i;
@@ -77,28 +72,21 @@ function do_export_pdf (fileName) {
 			if (fio !== null){
 				name = fio[1] + ";" + code + ";" + cnt;
 			}else{
-				name = number;
+				name = code + ";" + cnt;
 			}
 
-			fs.copySync(tmp_dir + fileName, success_dir + name + ".pdf");
 			// вырезаем страничку с анализом
-			// var pdf = spindrift(tmp_dir + fileName).page(count);
+			var pdf = spindrift(tmp_dir + fileName).page(count);
 			// сохраняем анализ с новым именем
-			// pdf.pdfStream().pipe(fs.createWriteStream(success_dir + name + ".pdf"))
-		}
-		// console.log('nop');
-		console.log(flagCodeRepeat);
-
-		for (var i=0; i<arrCode.length; i++){
-			for (var car in arrCode[i]){
-				console.log(car + " : " + arrCode[i][car]);
-			}
-		}
+			pdf.pdfStream().pipe(fs.createWriteStream(success_dir + name + ".pdf"));
+		};
+		//  обнуляем массив заявок(кодов)
+		arrCode = [];
 	});
 };
 
 
-
+// функция парсинга директории
 function parse(){
 	glob(source_dir + "*.pdf", function(err, files){
 		for (var file in files){
