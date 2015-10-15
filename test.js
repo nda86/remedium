@@ -35,7 +35,7 @@ function do_export_pdf (fileName) {
 		var re = /Заявка:\s*(.*\/.*\/\d*)/ig;
 
 		// регулярка для поиска имени
-		var re_name = /Пациент:\s*(.*)/i;
+		var re_name = /Пациент:\s*(.*)/ig;
 
 
 		while ((result = re.exec(pages)) !== null){
