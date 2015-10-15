@@ -67,7 +67,8 @@ function do_export_pdf (fileName) {
 			}
 			if (!flagCodeRepeat){
 				var newCode = new Code;
-				Code[number] = 0;
+				newCode[number] = 1;
+				arrCode.push(newCode);
 			}
 
 
@@ -85,7 +86,14 @@ function do_export_pdf (fileName) {
 			// сохраняем анализ с новым именем
 			// pdf.pdfStream().pipe(fs.createWriteStream(success_dir + name + ".pdf"))
 		}
-		console.log('nop');
+		// console.log('nop');
+		console.log(flagCodeRepeat);
+
+		for (var i=0; i<arrCode.length; i++){
+			for (var car in arrCode[i]){
+				console.log(car + " : " + arrCode[i][car]);
+			}
+		}
 	});
 };
 
