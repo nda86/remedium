@@ -24,32 +24,36 @@ function Code(){};
 
 var arrCode = [];
 
-function do_export_pdf (fileName) {
-	// пермещаем pdf в tmp папку для обработки
+
+function splitting (fileName) {
+	// перемещаем pdf в tmp папку для обработки
 	fs.renameSync(source_dir + fileName, tmp_dir + fileName);
-	//переводим pdf в txt
-	extract(tmp_dir + fileName, function(err, pages){
-		if (err) {
-			return console.log(err);
-		}
+}
+
+function do_export_pdf (fileName) {
+
+
+	// переводим pdf в txt
+	extract(tmp_dir + fileName, function(err, page){
+		if (err) {return console.log(err);}
+
 		// переводим объект с текстом в простой string
-		pages = pages.toString();
-		// инит счётчика страниц
-		var count = 0;
-		// регулярка для поиска номера анализа, используеся для имени файла
-		var re = /Заявка: (БрРМ\/.*\/\d*)/ig;
+		page = page.toString();
+		parsing(page, function(z,f,p){
 
-		// регулярка для поиска имени
-		var re_name = /Пациент:\s*(.*)/i;
+			
+		})
+		
 
 
-		while ((result = re.exec(pages)) !== null){
-			count++;
+
+
+
+
 
 			var name = '';
 		// содаём имя для pdf
 			// код(номер) анализа
-			var code = result[1].replace(/\//g,"_");
 			//  количественный номер анализа
 			var cnt = 1;
 
@@ -72,8 +76,6 @@ function do_export_pdf (fileName) {
 			}
 
 
-			// фио пациента
-			var fio = re_name.exec(pages);
 			if (fio !== null){
 				name = fio[1] + ";" + code + ";" + cnt;
 			}else{
@@ -107,5 +109,31 @@ function parse(){
 		};
 	});
 };
+
+
+
+function parsing (page, cb) {
+
+	// регулярка для поиска кода заявки
+	var re_zajavka = /Заявка:\s*(.*\/.*\/\d*)/i;
+	// регулярка для поиска имени
+	var re_fio = /Пациент:\s*(.*)/i;
+	// регулярка для поиска номера пробы
+	var re_proba = /№ пробы:\s*(\d*)/i;
+
+	// поиск заявки
+	var zajavka = re_zajavka.exec(page);
+	zajavka = zajavka[1].replace(/\//g,"_");
+
+	// фио пациента
+	var fio = re_fio.exec(page);
+	fio = fio[1];
+
+	// номер пробы
+	var proba = re_proba.exec(page);
+	proba = proba[1];
+
+	cb(z,f,p);
+}
 
 setInterval(parse, timer);

@@ -99,6 +99,11 @@ function parse(){
 
 // setInterval(parse, timer);
 
-var fileName = __dirname + "/test/1.js";
+var fileName = __dirname + "/test/1.pdf";
 var pdf = spindrift(fileName).page(1);
-console.log(pdf.toString());
+pdf = pdf.pdfStream();
+extract(pdf, function(err, page){
+	if (err) return err;
+	console.log(page);
+	console.log(page.toString());
+})
