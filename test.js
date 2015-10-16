@@ -75,6 +75,12 @@ function do_export_pdf (fileName) {
 				name = code + ";" + cnt;
 			}
 
+			var re_isp = /\s*Исполнитель\s*/ig;
+			var isp = re_isp.test(pages);
+			if (!isp) {
+				count++;
+				console.log(isp);
+			}
 			// вырезаем страничку с анализом
 			var pdf = spindrift(tmp_dir + fileName).page(count);
 			// сохраняем анализ с новым именем

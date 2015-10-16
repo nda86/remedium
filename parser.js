@@ -42,6 +42,11 @@ function do_export_pdf (file) {
 		var result2 = re_name.exec(pages);
 
 		console.log(result2[1]);
+
+		var re_isp = /\s*Исполнитель\s*/i;
+
+		var isp = re_isp.test(pages);
+		console.log(isp);
 		// while ((result = re.exec(pages)) !== null){
 		// 	count++;
 		// 	// содаём имя для pdf
