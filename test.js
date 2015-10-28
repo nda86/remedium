@@ -24,71 +24,85 @@ function do_export_pdf (fileName) {
 	fs.renameSync(source_dir + fileName, tmp_dir + fileName);
 	//переводим pdf в txt
 	extract(tmp_dir + fileName, function(err, pages){
+		var count = 0;
+
 		if (err) {
 			return console.log(err);
 		}
-		// переводим объект с текстом в простой string
-		pages = pages.toString();
-		// инит счётчика страниц
-		var count = 0;
-		// регулярка для поиска номера анализа, используеся для имени файла
-		var re = /Заявка:\s*(.*\/.*\/\d*)/ig;
 
-		// регулярка для поиска имени
-		var re_name = /Пациент:\s*(.*)/ig;
-
-
-		while ((result = re.exec(pages)) !== null){
-			count++;
-
-			var name = '';
-		// содаём имя для pdf
-			// код(номер) анализа
-			var code = result[1].replace(/\//g,"_");
-			//  количественный номер анализа
+		var i = 0;
+		while(i<pages.length){
 			var cnt = 1;
+			var page = pages[i];
 
-			// флаг повторного кода
+			var name = false;
+			var res_zav, res_isp, res_name, full_name;
+			var re_zav = /Заявка: (.*\/.*\/(\d*))/i;
+			var re_name = /Пациент:\s*(.*)/i;
+			var re_isp = /\s*(Исполнитель)\s*/i;
+
+			if ((res_zav = re_zav.exec(page)) !== null){
+				var code = res_zav[1].replace(/\//g,"_");
+				var code_number = res_zav[2];
+			}
+			if ((res_name = re_name.exec(page)) !== null){
+				name = res_name[1];
+				console.log(name);
+			}
+			if ((res_isp = re_isp.exec(page)) !== null){
+				var isp = res_isp[1];
+			}
+
+
+			// флаг повторного
 			var flagCodeRepeat = false;
-			for (var i=0; i<arrCode.length; i++){
-				var obj = arrCode[i];
-				if (obj[code] == null){
+			// пробегаем массив кодов анализов
+			for (var y=0; y<arrCode.length; y++){
+				//  берём объект код анализа
+				var obj = arrCode[y];
+				// если у него нет свойства с номером кода, то его нет вообще, тогда продолжаем
+				if (obj[code_number] == null){
 					continue;
 				}else{
-					obj[code]++;
-					cnt = obj[code];
+					// если объект с таким кодом уже есть, то увеличиваем счётчик повтора кода
+					obj[code_number]++;
+					// пишем это значение в переменную для имени файла
+					cnt = obj[code_number];
+					// сигнал о том что этот код уже есть в массиве
 					flagCodeRepeat = true;
 				}
 			}
+			// если кода нет в массиве то
 			if (!flagCodeRepeat){
+				// создаём объект кода
 				var newCode = new Code;
-				newCode[code] = 1;
+				// и ставим ему в качестве счётчика повтора 1
+				newCode[code_number] = 1;
+				// и кидаем его в массив
 				arrCode.push(newCode);
 			}
 
+			full_name = name + ";" + code + ";" + cnt;
+			// console.log('cnt: ' + cnt);
 
-			// фио пациента
-			var fio = re_name.exec(pages);
-			if (fio !== null){
-				name = fio[1] + ";" + code + ";" + cnt;
-			}else{
-				name = code + ";" + cnt;
-			}
-
-			var re_isp = /\s*Исполнитель\s*/ig;
-			var isp = re_isp.test(pages);
-			if (!isp) {
+			if((isp !== undefined) && (name !== undefined)){
 				count++;
-				console.log(isp);
+				var pdf = spindrift(tmp_dir + fileName).page(count);
+				pdf.pdfStream().pipe(fs.createWriteStream(success_dir + full_name + ".pdf"));
+				i++;
+			}else if (name === false){
+				i++;
+				console.log("опана");
+			}else{
+				count++;
+				var pdf = spindrift(tmp_dir + fileName).pages(count,count+1);
+				pdf.pdfStream().pipe(fs.createWriteStream(success_dir + full_name + ".pdf1"));
+				i++;
 			}
-			// вырезаем страничку с анализом
-			var pdf = spindrift(tmp_dir + fileName).page(count);
-			// сохраняем анализ с новым именем
-			pdf.pdfStream().pipe(fs.createWriteStream(success_dir + name + ".pdf"));
 		};
-		//  обнуляем массив заявок(кодов)
-		arrCode = [];
+
 	});
+		arrCode = [];
 };
 
 

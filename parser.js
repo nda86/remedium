@@ -26,40 +26,69 @@ function do_export_pdf (file) {
 		if (err) {
 			return console.log(err);
 		}
+		// console.dir(pages.length);
+		for (var i=0; i<pages.length; i++){
+			var page = pages[i];
+
+
+			var res_zav, res_isp, res_name;
+			var re_zav = /Заявка: (.*\/.*\/(\d*))/i;
+			var re_name = /Пациент:\s*(.*)/i;
+			var re_isp = /\s*(Исполнитель)\s*/i;
+
+			if ((res_zav = re_zav.exec(page)) !== null){
+				var code = res_zav[1].replace(/\//g,"_");
+				var code_number = res_zav[2];
+
+			}
+			if ((res_name = re_name.exec(page)) !== null){
+				var name = res_name[1];
+			}
+			if ((res_isp = re_isp.exec(page)) !== null){
+				var isp = res_isp[1];
+			}
+
+			// console.log('----------' + (i+1) + '---------------');
+			// console.log(code);
+			// console.log(name);
+			// console.log(isp);
+			// console.log('\n');
+			console.log(code_number);
+
+			
+		}
 		// переводим объект с текстом в простой string
-		pages = pages.toString();
+		// pages = pages.toString();
 		// инит счётчика страниц
-		var count = 0;
-		// регулярка для поиска номера анализа, используеся для имени файла
-		var re = /Заявка: (.*\/.*\/\d*)/ig;
+		// var count = 0;
+		// // регулярка для поиска номера анализа, используеся для имени файла
 
-		var result = re.exec(pages);
+		// var result = re.exec(pages);
 
-		console.log(result[1]);
+		// // console.log(result[1]);
 
-		var re_name = /Пациент:\s*(.*)/ig;
 
-		var result2 = re_name.exec(pages);
+		// var result2 = re_name.exec(pages);
 
-		console.log(result2[1]);
+		// // console.log(result2[1]);
 
-		var re_isp = /\s*Исполнитель\s*/i;
 
-		var isp = re_isp.test(pages);
-		console.log(isp);
-		// while ((result = re.exec(pages)) !== null){
-		// 	count++;
-		// 	// содаём имя для pdf
-		// 	var name = result[1].replace(/\//g,"_");
-		// 	// вырезаем страничку с анализом
-		// 	var pdf = spindrift(tmp_dir + fileName).page(count);
-		// 	// сохраняем анализ с новым именем
-		// 	pdf.pdfStream().pipe(fs.createWriteStream(success_dir + name + ".pdf"))
-		// }
+		// // var isp = re_isp.test(pages);
+		// // console.log(isp);
+		// var i = 0;
+		// // while ((res = re_isp.exec(pages)) !== null){
+		// // 	i++;
+		// // 	console.log(res[0]);
+		// // }
 	});
 };
 
-var file = __dirname + "/test/1.pdf";
+var file = __dirname + "/test/two.pdf";
 do_export_pdf(file);
 
+// var i = 0;
+// while(i<pages.length){
+// 	var page = pages[i];
+	
+// }
 
