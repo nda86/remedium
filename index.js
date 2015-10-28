@@ -36,6 +36,7 @@ function do_export_pdf (fileName) {
 			var page = pages[i];
 
 			var name = false;
+			var isp = false;
 			var res_zav, res_isp, res_name, full_name;
 			var re_zav = /Заявка: (.*\/.*\/(\d*))/i;
 			var re_name = /Пациент:\s*(.*)/i;
@@ -47,10 +48,10 @@ function do_export_pdf (fileName) {
 			}
 			if ((res_name = re_name.exec(page)) !== null){
 				name = res_name[1];
-				// console.log(name);
+				console.log(name);
 			}
 			if ((res_isp = re_isp.exec(page)) !== null){
-				var isp = res_isp[1];
+				isp = res_isp[1];
 			}
 
 
@@ -85,20 +86,23 @@ function do_export_pdf (fileName) {
 			full_name = name + ";" + code + ";" + cnt;
 			// console.log('cnt: ' + cnt);
 
-			if((isp !== undefined) && (name !== false)){
+			if((isp !== false) && (name !== false)){
 				count++;
 				var pdf = spindrift(tmp_dir + fileName).page(count);
 				pdf.pdfStream().pipe(fs.createWriteStream(success_dir + full_name + ".pdf"));
 				i++;
-			}else if (name === false){
-				i++;
-				count++;
-				// console.log("опана");
-			}else{
+				console.log("(isp !== undefined) && (name !== false)");
+			}else if ((name !== false) && (isp === false)){
 				count++;
 				var pdf = spindrift(tmp_dir + fileName).pages(count,count+1);
 				pdf.pdfStream().pipe(fs.createWriteStream(success_dir + full_name + ".pdf"));
 				i++;
+				console.log('two!!!');
+			}else{
+				i++;
+				count++;
+				// console.log("опана");
+				console.log('нет имени');
 			}
 		};
 
