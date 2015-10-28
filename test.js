@@ -93,11 +93,11 @@ function do_export_pdf (fileName) {
 			}else if (name === false){
 				i++;
 				count++;
-				console.log("опана");
+				// console.log("опана");
 			}else{
 				count++;
 				var pdf = spindrift(tmp_dir + fileName).pages(count,count+1);
-				pdf.pdfStream().pipe(fs.createWriteStream(success_dir + full_name + ".pdf1"));
+				pdf.pdfStream().pipe(fs.createWriteStream(success_dir + full_name + ".pdf"));
 				i++;
 			}
 		};
