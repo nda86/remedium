@@ -47,7 +47,7 @@ function do_export_pdf (fileName) {
 			}
 			if ((res_name = re_name.exec(page)) !== null){
 				name = res_name[1];
-				console.log(name);
+				// console.log(name);
 			}
 			if ((res_isp = re_isp.exec(page)) !== null){
 				var isp = res_isp[1];
@@ -63,7 +63,7 @@ function do_export_pdf (fileName) {
 				// если у него нет свойства с номером кода, то его нет вообще, тогда продолжаем
 				if (obj[code_number] == null){
 					continue;
-				}else{
+				}else if (name !== false){
 					// если объект с таким кодом уже есть, то увеличиваем счётчик повтора кода
 					obj[code_number]++;
 					// пишем это значение в переменную для имени файла
@@ -73,7 +73,7 @@ function do_export_pdf (fileName) {
 				}
 			}
 			// если кода нет в массиве то
-			if (!flagCodeRepeat){
+			if ((!flagCodeRepeat) && (name !== false)){
 				// создаём объект кода
 				var newCode = new Code;
 				// и ставим ему в качестве счётчика повтора 1
@@ -85,13 +85,14 @@ function do_export_pdf (fileName) {
 			full_name = name + ";" + code + ";" + cnt;
 			// console.log('cnt: ' + cnt);
 
-			if((isp !== undefined) && (name !== undefined)){
+			if((isp !== undefined) && (name !== false)){
 				count++;
 				var pdf = spindrift(tmp_dir + fileName).page(count);
 				pdf.pdfStream().pipe(fs.createWriteStream(success_dir + full_name + ".pdf"));
 				i++;
 			}else if (name === false){
 				i++;
+				count++;
 				console.log("опана");
 			}else{
 				count++;
